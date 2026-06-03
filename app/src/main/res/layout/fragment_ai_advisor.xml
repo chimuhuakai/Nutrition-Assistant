@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_background"
+    android:orientation="vertical">
+
+    <!-- 顶部标题（保持不变） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="智能 AI 营养顾问"
+            android:textColor="@color/text_title"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="由通义千问大模型提供医学、营养学专业精细解构"
+            android:textColor="@color/text_caption"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <!-- 升级为全胶囊弧度圆角，去除突兀的硬边缘 -->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:checkedButton="@id/btnModeNextMeal"
+            app:cornerRadius="20dp"
+            app:selectionRequired="true"
+            app:singleSelection="true"
+            app:strokeColor="@color/neutral_line"
+            app:strokeWidth="1dp"> <!-- 全胶囊外观的核心 -->
+
+            <!-- 按钮样式调整为 OutlinedButton，彻底摆脱厚重的方块感 -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnModeNextMeal"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-medium"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="20dp"
+                android:backgroundTint="@color/toggle_btn_bg_selector"
+                android:text="✨ 下一餐推荐"
+                android:textColor="@color/toggle_btn_text_selector"
+                android:textSize="12sp"
+                app:strokeWidth="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnModeFullDay"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-medium"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:paddingHorizontal="20dp"
+                android:text="📅 全天规划"
+                android:backgroundTint="@color/toggle_btn_bg_selector"
+                android:textColor="@color/toggle_btn_text_selector"
+                android:textSize="12sp"
+                app:strokeWidth="0dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+    </LinearLayout>
+
+
+    <!-- 中间可滚动聊天区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:paddingHorizontal="24dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layoutChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="12dp" />
+    </ScrollView>
+
+    <!-- 加载动画 -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:indicatorColor="@color/brand_primary"
+        app:trackColor="@color/brand_primary_container"
+        tools:visibility="visible" />
+
+    <!-- 底部输入栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/brand_surface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etQuestion"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:hint="请输入您的问题"
+            android:inputType="text"
+            android:maxLines="2"
+            android:paddingHorizontal="16dp"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/brand_primary"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="20dp"
+            android:text="发送"
+            android:textColor="@color/brand_surface"
+            android:textSize="14sp"
+            app:cornerRadius="24dp"
+            app:elevation="2dp" />
+    </LinearLayout>
+</LinearLayout>

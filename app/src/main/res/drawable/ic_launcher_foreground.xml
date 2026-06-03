@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 1. 隐藏的微光呼吸虚晕（径向过渡，给线条下方垫一层若隐若现的无界空气感） -->
+    <path
+        android:pathData="M54,54m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="54"
+                android:centerY="46"
+                android:gradientRadius="42"
+                android:type="radial">
+                <item android:offset="0.0" android:color="#E6F2ED"/> <!-- 浅翡翠绿呼吸色 -->
+                <item android:offset="1.0" android:color="#00000000"/> <!-- 融于无形 -->
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 2. 第一条能量曲线：核心翡翠绿（4.5dp 黄金纤细线宽，大厂极简质感） -->
+    <path
+        android:pathData="M32,62 C38,68 46,64 54,54 C62,44 70,40 76,46 C84,54 78,66 70,64 C62,62 52,50 44,44 C38,40 30,44 32,54 C32.5,57.5 34.5,60 37,62"
+        android:strokeColor="#2D7A5E"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"/>
+
+    <!-- 3. 第二条能量曲线：舒缓开心果嫩绿（双线交织，勾勒出优雅的马甲线/紧致腰线意象） -->
+    <path
+        android:pathData="M37,46 C44,40 52,48 60,56 C68,64 74,66 76,60 C78,54 74,44 66,44 C56,44 48,56 40,62 C34,68 28,60 34,48"
+        android:strokeColor="#8FAF9F"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"/>
+
+
+</vector>

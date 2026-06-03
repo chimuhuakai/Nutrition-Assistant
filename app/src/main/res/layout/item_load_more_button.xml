@@ -1,0 +1,43 @@
+<!-- 在 layoutChat 和 progressBar 之间 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoadMore"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="✨ 探索更多相似美食"
+        android:textSize="13sp"
+        android:textColor="@color/brand_primary"
+        android:fontFamily="sans-serif-medium"
+        app:backgroundTint="@color/brand_primary_container"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingHorizontal="24dp"
+        app:elevation="0dp"
+        app:strokeWidth="0dp"
+        android:visibility="gone"
+        tools:visibility="visible" /><!-- 初始隐藏，有推荐结果时才显示 -->
+
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressLoadMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        app:indicatorColor="@color/brand_primary"
+        app:trackColor="@color/brand_primary_container" />
+
+</FrameLayout>
+
+
+

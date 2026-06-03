@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#2D7A5E</color>
+    <color name="brand_primary_container">#E6F2ED</color>
+
+    <color name="brand_secondary">#7A6855</color>
+    <color name="brand_background">#FAF8F5</color>
+    <color name="brand_surface">#FFFFFF</color>
+
+    <color name="text_title">#1A1C1A</color>
+    <color name="text_body">#414944</color>
+    <color name="text_caption">#8B938D</color>
+
+    <color name="neutral_line">#EDECE9</color>
+    <color name="state_danger">#C84B4B</color>
+    <color name="state_warning">#FF9800</color>
+    <color name="state_danger_container">#FDF2F2</color>
+
+    <color name="tag_breakfast_bg">#FFF4E6</color>
+    <color name="tag_breakfast_text">#945400</color>
+
+    <color name="tag_lunch_bg">#E6F2ED</color>
+    <color name="tag_lunch_text">#2D7A5E</color>
+
+    <color name="tag_dinner_bg">#EDF4F7</color>
+    <color name="tag_dinner_text">#2E4A59</color>
+
+    <color name="tag_snack_bg">#F0F5F2</color>
+    <color name="tag_snack_text">#4A6B5D</color>
+
+
+</resources>

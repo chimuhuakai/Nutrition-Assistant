@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.nutritionassistant.ui.screen.home.HomeFragment"
+        android:label="首页">
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aiAdvisorFragment"
+            app:destination="@id/aiAdvisorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_analyzeFragment"
+            app:destination="@id/analyzeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reportFragment"
+            app:destination="@id/reportFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.nutritionassistant.ui.screen.profile.ProfileFragment"
+        android:label="个人资料" />
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.example.nutritionassistant.ui.screen.scan.ScanFragment"
+        android:label="扫码" />
+
+    <fragment
+        android:id="@+id/aiAdvisorFragment"
+        android:name="com.example.nutritionassistant.ui.screen.aiadvisor.AiAdvisorFragment"
+        android:label="AI 推荐" />
+
+    <fragment
+        android:id="@+id/analyzeFragment"
+        android:name="com.example.nutritionassistant.ui.screen.analyze.AnalyzeFragment"
+        android:label="拍照分析" />
+
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="com.example.nutritionassistant.ui.screen.diary.DiaryFragment"
+        android:label="饮食日记">
+        <action
+            android:id="@+id/action_diaryFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_diaryFragment_to_analyzeFragment"
+            app:destination="@id/analyzeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.example.nutritionassistant.ui.screen.report.ReportFragment"
+        android:label="营养报告" />
+
+
+</navigation>
